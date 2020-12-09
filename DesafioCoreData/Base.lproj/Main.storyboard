@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DesafioCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarefa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cg8-T5-993">
+                                <rect key="frame" x="20" y="52" width="48.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-70-GWH">
+                                <rect key="frame" x="76.5" y="45" width="317.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOJ-ro-Vgx">
+                                <rect key="frame" x="127" y="107" width="160" height="30"/>
+                                <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="actionButtonAddTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zar-Ta-Voo"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CJK-gr-fdc">
+                                <rect key="frame" x="0.0" y="160" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskViewCell" rowHeight="47" id="Gs2-dr-emT" customClass="TaskViewCell" customModule="DesafioCoreData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="47"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gs2-dr-emT" id="3Ay-rN-0Jc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarefa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5u-IS-aB1">
+                                                    <rect key="frame" x="20" y="11" width="52" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwX-Va-Q5D">
+                                                    <rect key="frame" x="80" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jwX-Va-Q5D" firstAttribute="leading" secondItem="l5u-IS-aB1" secondAttribute="trailing" constant="8" symbolic="YES" id="AOA-nj-cRX"/>
+                                                <constraint firstItem="jwX-Va-Q5D" firstAttribute="top" secondItem="3Ay-rN-0Jc" secondAttribute="topMargin" id="cv0-0Y-HNa"/>
+                                                <constraint firstItem="l5u-IS-aB1" firstAttribute="top" secondItem="3Ay-rN-0Jc" secondAttribute="topMargin" id="i7D-hV-sUZ"/>
+                                                <constraint firstItem="l5u-IS-aB1" firstAttribute="leading" secondItem="3Ay-rN-0Jc" secondAttribute="leadingMargin" id="wt6-0N-I7O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelTask" destination="jwX-Va-Q5D" id="Vlv-2o-ucv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CJK-gr-fdc" firstAttribute="top" secondItem="eOJ-ro-Vgx" secondAttribute="bottom" constant="23" id="2Ex-gt-Gtp"/>
+                            <constraint firstItem="E1h-70-GWH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="5f8-TD-8Qv"/>
+                            <constraint firstItem="eOJ-ro-Vgx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="8Ml-ns-kyo"/>
+                            <constraint firstItem="E1h-70-GWH" firstAttribute="leading" secondItem="cg8-T5-993" secondAttribute="trailing" constant="8" symbolic="YES" id="AEh-zI-2MA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eOJ-ro-Vgx" secondAttribute="trailing" constant="127" id="BwL-9s-0IO"/>
+                            <constraint firstItem="eOJ-ro-Vgx" firstAttribute="top" secondItem="E1h-70-GWH" secondAttribute="bottom" constant="28" id="IPv-QP-RK1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CJK-gr-fdc" secondAttribute="bottom" id="Krs-s9-sPB"/>
+                            <constraint firstItem="CJK-gr-fdc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PGP-vZ-MNB"/>
+                            <constraint firstItem="cg8-T5-993" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Piq-8F-f9l"/>
+                            <constraint firstItem="CJK-gr-fdc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qdu-ca-O77"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E1h-70-GWH" secondAttribute="trailing" constant="20" id="flz-Kj-qVq"/>
+                            <constraint firstItem="cg8-T5-993" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tFR-gb-82J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewTasks" destination="CJK-gr-fdc" id="UHA-LS-wvM"/>
+                        <outlet property="textFieldTask" destination="E1h-70-GWH" id="QfL-Ud-ITa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
